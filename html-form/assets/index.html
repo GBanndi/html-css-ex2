@@ -11,12 +11,12 @@
 <section>
     <h1>Registration form</h1>
     <form>
-        <!--formdataként el akarja küldeni backendre-->
+        <!--    formdataként el akarja küldeni backendre-->
         <fieldset>
 
             <legend>Personal data</legend>
             <div>
-                <!--name lesz formdatában, id-vel elérjük css-ből meg js-ből, name-et megéri elnevezni ahogy DTO-ban van validálni lehet required- taggel-->
+                <!--            name lesz formdatában, id-vel elérjük css-ből meg js-ből, name-et megéri elnevezni ahogy DTO-ban van validálni lehet required- taggel-->
                 <label for="first-name">First name:</label>
                 <input type="text" name="firstName" id="first-name" required>
             </div>
@@ -24,10 +24,94 @@
                 <label for="last-name">Last name:</label>
                 <input type="text" name="firstName" id="last-name" required>
             </div>
+            <div>
+                <!--            az egybe tartozó radio buttonoknek u. az a neve-->
+                <label>Gender:</label>
+                <div>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Male</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" id="other" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            <div>
+                <label for="date-of-birth">Date of birth:</label>
+                <input type="date" name="dateOfBirth" id="date-of-birth" max="2010-01-01">
+            </div>
+            <div>
+                <label>Nationality:</label>
+                <select name="nationality" id="nationality">
+                    <option value="" disabled selected>Please choose one...</option>
+                    <option value="hun">Hungarian</option>
+                    <option value="en">English</option>
+                    <option value="ger">German</option>
+                    <option value="usa">American</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label>Contact number:</label>
+                <input type="number" name="contactNumber" id="contact-number">
+            </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                <label for="user-name">Username:</label>
+                <input type="text" name="userName" id="user-name" maxlength="20">
+            </div>
 
-<!--0:45-nél járok-->
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+            </div>
+
+            <div>
+                <label for="stack">Your stack:</label>
+                <select name="stack" id="stack" multiple size="5">
+                    <option value="java">Java</option>
+                    <option value="nodeJs">NodeJS</option>
+                    <option value="c++">C++</option>
+                    <option value="html">Html</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="react">React</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="bio">Biography:</label>
+                <textarea name="bio" id="bio" cols="30" rows="10"
+                          placeholder="Tell us something about yourself..."></textarea>
+            </div>
+
+            <div>
+                <label>Your hobbies:</label>
+                <input type="checkbox" name="hobbies" id="reading" value="reading">
+                <label for="reading">Reading</label>
+                <input type="checkbox" name="hobbies" id="running" value="running">
+                <label for="running">Running</label>
+                <input type="checkbox" name="hobbies" id="hiking" value="hiking">
+                <label for="hiking">Hiking</label>
+                <input type="checkbox" name="hobbies" id="singing" value="singing">
+                <label for="singing">Singing</label>
+                <input type="checkbox" name="hobbies" id="swimming" value="swimming">
+                <label for="swimming">Swimming</label>
+
+<!--                1:44-nél vagyok-->
+            </div>
 
         </fieldset>
+
     </form>
 </section>
 
