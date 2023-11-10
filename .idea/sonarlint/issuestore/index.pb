@@ -3,8 +3,6 @@
 
 index.html,f\6\f6013a00b362253c64368d6eebc50ea2131754e2
 @
-.idea/index.html,6\1\611b3d3147cf09d413604c8b5c9c84c6a824d2e7
-@
 html-css-ex2.iml,f\a\fabf4ac3b2b8f4da511909323b16b0a173603e04
 >
 stylesheet.css,9\3\93c66680dc556a43ade8d145a2860bcde41f4370
@@ -74,3 +72,7 @@ w
 G.idea/sonarlint/issuestore/8/1/8194a7246893a921aafb682385eb3feec422bf93,3\0\30a8abd8e17ec2b53e52f6b388caed7b66658515
 w
 G.idea/sonarlint/issuestore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e,a\e\ae9ddf453f55affea2d6b9e3973cac1eb2efb4e1
+K
+html-form/assets/index.html,a\d\add6b815e62c8ad5bb3462e7b590bfb73ecd43bf
+J
+html-form/assets/style.css,e\6\e6192bdf6cc75f4926923313115fd6b27b39c74d

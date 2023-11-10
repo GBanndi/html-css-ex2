@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<section>
+    <h1>Registration form</h1>
+    <form>
+        <!--formdataként el akarja küldeni backendre-->
+        <fieldset>
+
+            <legend>Personal data</legend>
+            <div>
+                <!--name lesz formdatában, id-vel elérjük css-ből meg js-ből, name-et megéri elnevezni ahogy DTO-ban van validálni lehet required- taggel-->
+                <label for="first-name">First name:</label>
+                <input type="text" name="firstName" id="first-name" required>
+            </div>
+            <div>
+                <label for="last-name">Last name:</label>
+                <input type="text" name="firstName" id="last-name" required>
+            </div>
+
+<!--0:45-nél járok-->
+
+        </fieldset>
+    </form>
+</section>
+
+</body>
+</html>
