@@ -1,0 +1,59 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: blue;
+    background-color: #afd9d8;
+    background-image: linear-gradient(180deg, #afd9d8 0%, #203ea4 99%);
+}
+
+h1 {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding: 25px;
+}
+
+section {
+    width: 50%;
+    margin: auto;
+    padding: 25px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 2px 2px grey;
+}
+
+form div label {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    display: block;
+}
+
+form div input, textarea {
+    width: 95%;
+}
+
+.radio-and-checkbox-label {
+    display: inline;
+}
+
+.radio-and-checkbox-input {
+    width: auto;
+}
+
+.button-container {
+    text-align: center;
+    border-radius: 4px;
+}
+
+.button-container button{
+    border-radius: 5px;
+    background-color: blue;
+    color: whitesmoke;
+    padding: 3px;
+    box-shadow: 1px 1px black;
+}
+
+.terms{
+    text-align: center;
+    padding: 5px;
+}

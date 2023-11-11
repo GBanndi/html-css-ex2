@@ -5,45 +5,53 @@
     <meta charset="UTF-8">
     <title>Registration form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="functions.js"></script>
 </head>
 
 <body>
+<h1>Registration form</h1>
 <section>
-    <h1>Registration form</h1>
     <form>
         <!--    formdataként el akarja küldeni backendre-->
         <fieldset>
-
             <legend>Personal data</legend>
+
             <div>
                 <!--            name lesz formdatában, id-vel elérjük css-ből meg js-ből, name-et megéri elnevezni ahogy DTO-ban van validálni lehet required- taggel-->
                 <label for="first-name">First name:</label>
                 <input type="text" name="firstName" id="first-name" required>
             </div>
+
             <div>
                 <label for="last-name">Last name:</label>
                 <input type="text" name="firstName" id="last-name" required>
             </div>
+
             <div>
                 <!--            az egybe tartozó radio buttonoknek u. az a neve-->
                 <label>Gender:</label>
                 <div>
-                    <input type="radio" name="gender" id="male" value="male">
-                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="male" value="male" class="radio-and-checkbox-input">
+                    <label class="radio-and-checkbox-label" for="male">Male</label>
                 </div>
                 <div>
-                    <input type="radio" name="gender" id="female" value="female">
-                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="female" value="female" class="radio-and-checkbox-input">
+                    <label class="radio-and-checkbox-label" for="female">Female</label>
                 </div>
                 <div>
-                    <input type="radio" name="gender" id="other" value="other">
-                    <label for="other">Other</label>
+                    <input type="radio" name="gender" id="other" value="other" class="radio-and-checkbox-input">
+                    <label class="radio-and-checkbox-label" for="other">Other</label>
                 </div>
             </div>
+
             <div>
                 <label for="date-of-birth">Date of birth:</label>
                 <input type="date" name="dateOfBirth" id="date-of-birth" max="2010-01-01">
             </div>
+
             <div>
                 <label>Nationality:</label>
                 <select name="nationality" id="nationality">
@@ -55,62 +63,99 @@
                     <option value="other">Other</option>
                 </select>
             </div>
+
             <div>
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email">
             </div>
+
             <div>
                 <label>Contact number:</label>
                 <input type="number" name="contactNumber" id="contact-number">
             </div>
         </fieldset>
+
+        <div>
+            <label for="user-name">Username:</label>
+            <input type="text" name="userName" id="user-name" maxlength="20">
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password">
+            <br>
+            <input type="checkbox" onclick="changePassword()" class="radio-and-checkbox-input">Show Password
+        </div>
+
+        <div>
+            <label for="stack">Your stack:</label>
+            <select name="stack" id="stack" multiple size="5">
+                <option value="java">Java</option>
+                <option value="nodeJs">NodeJS</option>
+                <option value="c++">C++</option>
+                <option value="html">Html</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="react">React</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="bio">Biography:</label>
+            <textarea name="bio" id="bio" cols="30" rows="10"
+                      placeholder="Tell us something about yourself..."></textarea>
+        </div>
+
+        <div>
+            <label>Your hobbies:</label>
+            <span>
+                <input type="checkbox" name="hobbies" id="reading" value="reading" class="radio-and-checkbox-input">
+                <label class="radio-and-checkbox-label" for="reading">Reading</label>
+                </span>
+            <span>
+                <input type="checkbox" name="hobbies" id="running" value="running" class="radio-and-checkbox-input">
+                <label class="radio-and-checkbox-label" for="running">Running</label>
+                </span>
+            <span>
+                <input type="checkbox" name="hobbies" id="hiking" value="hiking" class="radio-and-checkbox-input">
+                <label class="radio-and-checkbox-label" for="hiking">Hiking</label>
+                </span>
+            <span>
+                <input type="checkbox" name="hobbies" id="singing" value="singing" class="radio-and-checkbox-input">
+                <label class="radio-and-checkbox-label" for="singing">Singing</label>
+                </span>
+            <span>
+                <input type="checkbox" name="hobbies" id="swimming" value="swimming" class="radio-and-checkbox-input">
+                <label class="radio-and-checkbox-label" for="swimming">Swimming</label>
+                </span>
+        </div>
+
+        <div>
+            <label for="profile-picture"></label>
+            <input type="file" name="profilePicture" id="profile-picture" accept="image/*">
+        </div>
+
         <fieldset>
+            <legend>Terms and conditions</legend>
+
             <div>
-                <label for="user-name">Username:</label>
-                <input type="text" name="userName" id="user-name" maxlength="20">
+                <input type="checkbox" name="terms" id="terms" class="radio-and-checkbox-input">
+                <label class="radio-and-checkbox-label" for="terms">I accept terms and conditions!</label>
             </div>
 
             <div>
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password">
+                <input type="checkbox" name="subscribe" id="subscribe" class="radio-and-checkbox-input">
+                <label class="radio-and-checkbox-label" for="subscribe">I want to subscribe to the newsletter!</label>
             </div>
-
-            <div>
-                <label for="stack">Your stack:</label>
-                <select name="stack" id="stack" multiple size="5">
-                    <option value="java">Java</option>
-                    <option value="nodeJs">NodeJS</option>
-                    <option value="c++">C++</option>
-                    <option value="html">Html</option>
-                    <option value="css">CSS</option>
-                    <option value="javascript">JavaScript</option>
-                    <option value="react">React</option>
-                </select>
-            </div>
-
-            <div>
-                <label for="bio">Biography:</label>
-                <textarea name="bio" id="bio" cols="30" rows="10"
-                          placeholder="Tell us something about yourself..."></textarea>
-            </div>
-
-            <div>
-                <label>Your hobbies:</label>
-                <input type="checkbox" name="hobbies" id="reading" value="reading">
-                <label for="reading">Reading</label>
-                <input type="checkbox" name="hobbies" id="running" value="running">
-                <label for="running">Running</label>
-                <input type="checkbox" name="hobbies" id="hiking" value="hiking">
-                <label for="hiking">Hiking</label>
-                <input type="checkbox" name="hobbies" id="singing" value="singing">
-                <label for="singing">Singing</label>
-                <input type="checkbox" name="hobbies" id="swimming" value="swimming">
-                <label for="swimming">Swimming</label>
-
-<!--                1:44-nél vagyok-->
-            </div>
-
         </fieldset>
+
+        <div class="terms">
+            <a href="terms.html" target="_blank">Read terms and conditions</a>
+        </div>
+
+        <div class="button-container">
+            <button type="submit" onclick="alert('Thank you for your registration')">Register</button>
+        </div>
 
     </form>
 </section>
